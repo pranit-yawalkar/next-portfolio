@@ -17,7 +17,7 @@ const bolsomiq = Balsamiq({
 export const metadata: Metadata = {
   title: "Pranit Yawalkar - Portfolio",
   description:
-    "Hi, I'm Pranit Yawalkar. I'm a Software Developer this is my personal portfolio website.",
+    "Hi, I'm Pranit Yawalkar, a skilled Software Developer specializing in creating dynamic user interfaces with React and Angular, developing robust mobile applications with React Native, and building scalable backend solutions with Node.js and AWS Serverless. Explore my portfolio to see my projects and expertise in modern web and mobile development.",
 };
 
 export default function RootLayout({
