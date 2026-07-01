@@ -1,61 +1,48 @@
-import React, { ReactElement } from "react";
-import { FiMonitor } from "react-icons/fi";
-import { BiServer } from "react-icons/bi";
-import { BsFillCloudCheckFill } from "react-icons/bs";
+import React from "react";
 
-interface WhatIDoItem {
-  icon: ReactElement;
-  title: string;
-  subtitle: string;
-}
-
-const WhatIDo = () => {
-  const items: WhatIDoItem[] = [
-    {
-      icon: <FiMonitor size={100} />,
-      title: "Frontend",
-      subtitle:
-        "I design and build beautiful, responsive, and user-friendly websites and web applications using modern frontend frameworks and libraries such as React and Angular",
-    },
-    {
-      icon: <BiServer size={100} />,
-      title: "Backend",
-      subtitle:
-        "I build and maintain robust and scalable backend APIs and microservices using popular programming languages such as Spring Boot and Node.js.",
-    },
-    {
-      icon: <BsFillCloudCheckFill size={100} />,
-      title: "Deployment",
-      subtitle:
-        "I am also proficient in modern deployment tools like Docker, Kubernetes and deploygng and managing the web applications in a variety of environments.",
-    },
-  ];
-
+const WhyBusinessesWorkWithMe = () => {
   return (
     <div
       id="about"
-      className="bg-gray-200 dark:bg-[#232D3F] dark:text-white w-100 py-5 scroll-mt-32"
+      className="w-full py-14 md:py-20 scroll-mt-32 relative overflow-hidden"
     >
-      <div className="max-w-[1200px] px-5 py-5 mx-auto">
-        <h2 className="font-bolsomiq text-5xl text-center font-semibold">
-          What I do?
-        </h2>
-        <div className="flex gap-5 my-10 flex-col md:flex-row">
-          {items.map((item, index) => (
-            <div className="item" key={index}>
-              <div className="flex flex-col gap-3 items-center">
-                {item.icon}
-                <h3 className="font-bolsomiq text-2xl">{item.title}</h3>
-                <p className="text-center text-lg font-light">
-                  {item.subtitle}
-                </p>
-              </div>
-            </div>
-          ))}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-accent-500/5 to-primary-500/5"></div>
+      <div className="max-w-[1200px] px-4 md:px-5 py-5 mx-auto relative z-10">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-dark-900 dark:text-white mb-3">
+            Why Businesses Work With Me
+          </h2>
+          <p className="text-base md:text-xl text-dark-600 dark:text-dark-300 max-w-3xl mx-auto font-light">
+            Technology should accelerate growth, not create complexity.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="glass rounded-2xl p-5 md:p-12">
+            <p className="text-sm md:text-xl text-dark-700 dark:text-dark-200 leading-relaxed mb-5 md:mb-8">
+              I help businesses design, build, modernize, and scale digital products that solve real operational problems. Whether it&apos;s an ERP platform, a healthcare consultation system, an AI-powered document workflow, or a financial management application, I focus on creating software that is secure, scalable, and easy to evolve.
+            </p>
+            <p className="text-sm md:text-xl text-dark-700 dark:text-dark-200 leading-relaxed">
+              I work across the complete product lifecycle—from architecture and UI/UX implementation to backend development, cloud deployment, and long-term optimization.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className="glass rounded-xl p-6 card-hover">
+            <div className="text-3xl font-bold text-gradient mb-2">End-to-End</div>
+            <div className="text-dark-600 dark:text-dark-300">From concept to deployment and support</div>
+          </div>
+          <div className="glass rounded-xl p-6 card-hover">
+            <div className="text-3xl font-bold text-gradient mb-2">Business-First</div>
+            <div className="text-dark-600 dark:text-dark-300">Technology aligned with your goals</div>
+          </div>
+          <div className="glass rounded-xl p-6 card-hover">
+            <div className="text-3xl font-bold text-gradient mb-2">Scalable</div>
+            <div className="text-dark-600 dark:text-dark-300">Built for long-term growth</div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default WhatIDo;
+export default WhyBusinessesWorkWithMe;

@@ -1,85 +1,86 @@
 "use client";
 import React from "react";
-import shoppingspot from "../assets/images/projects/shopping-spot.png";
-import shopforhome from "../assets/images/projects/shopforhome.jpeg";
-import vmeet from "../assets/images/projects/vmeet.png";
-import Image from "next/image";
 
 interface ProjectItem {
-  image: string;
   title: string;
   description: string;
-  url: string;
+  businessOutcome: string;
+  capabilities: string[];
+  url?: string;
 }
 
 const Projects = () => {
   const projects: ProjectItem[] = [
     {
-      image: "/images/projects/vmeet.png",
-      title: "VMeet - A Video Conference App",
-      description:
-        "VMeet is a video conference application created using NextJS 13, ShadcnUI. This application involves instant meetings, schedule meetings, recording and advanced meeting features.",
-      url: "https://vmeetapp.vercel.app/",
+      title: "Enterprise Healthcare ERP",
+      description: "A centralized platform for managing healthcare operations, user workflows, reporting, scheduling, and administrative processes.",
+      businessOutcome: "Unified fragmented business operations into a centralized platform with role-based workflows, reporting, and operational visibility.",
+      capabilities: ["Patient Management", "Role-based Dashboards", "Analytics", "Appointment Scheduling", "Workflow Automation", "Admin Portal", "Cloud Deployment"]
     },
     {
-      image: "/images/projects/shopping-spot.png",
-      title: "Shopping Spot Ecommerce App",
-      description:
-        "Shopping Spot is an ecommerce application created using ReactJS and TailwindCSS in Frontend and Nodejs, Express, MongoDB in backend. This application also involves payment integration using Razorpay.",
-      url: "https://shopping-spot.netlify.app/",
+      title: "Healthcare CRM",
+      description: "Designed for healthcare organizations to streamline lead management, patient engagement, campaign tracking, and operational visibility.",
+      businessOutcome: "Reduced manual administrative effort by digitizing customer and patient workflows.",
+      capabilities: ["Lead Management", "Patient Engagement", "Campaign Tracking", "Reporting Dashboard", "Role Management"]
     },
     {
-      image: "/images/projects/shopforhome.jpeg",
-      title: "ShopForHome",
-      description:
-        "Shopforhome is an Microservices based ecommerce application created using Java, Spring Boot in baceknd and Angular and Bootstrap 5 are used in the front end.",
-      url: "",
+      title: "AI-Powered Document Intelligence",
+      description: "A financial services platform that automates contract analysis, document processing, and investment reporting using AI.",
+      businessOutcome: "Reduced document processing time by automating contract analysis and report generation workflows.",
+      capabilities: ["Contract Analysis", "AI Document Processing", "Investment Dashboard", "Audit Logs", "Role Based Access"]
     },
+    {
+      title: "Online Consultation Platform",
+      description: "Telehealth platform enabling video consultations, appointment management, and doctor-patient communication.",
+      businessOutcome: "Enabled seamless remote healthcare delivery with scheduling, video consultation, and secure patient data.",
+      capabilities: ["Video Consultation", "Appointment Management", "Doctor Dashboards", "Secure Messaging", "Mobile App"]
+    },
+    {
+      title: "SaaS Admin Dashboard",
+      description: "A multi-tenant admin platform with advanced role management, analytics, and workflow automation.",
+      businessOutcome: "Streamlined operations across multiple business units with real-time visibility and automation.",
+      capabilities: ["Multi-Tenant", "Role Management", "Analytics", "Workflow Automation", "API Integrations"]
+    }
   ];
 
-  const openProject = (url: string) => {
-    window.open(url, "_blank");
+  const openProject = (url?: string) => {
+    if (url) window.open(url, "_blank");
   };
 
   return (
-    <div
-      id="projects"
-      className="max-w-[1200px] px-5 py-8 mx-auto dark:text-white scroll-mt-32"
-    >
-      <h2 className="font-bolsomiq text-5xl text-center font-semibold">
-        Projects
-      </h2>
-      {projects.map((project: ProjectItem, index: number) => (
-        <div
-          key={index}
-          className="flex flex-col md:flex-row gap-10 items-center md:items-start justify-center my-20"
-        >
-          <div className="max-w-[400px] w-full h-[250px] relative group">
-            <Image
-              className="mx-auto rounded-lg border-2 border-gray-200 p-3 transition-transform transform-gpu group-hover:scale-105 group-hover:brightness-50"
-              src={project.image}
-              alt={project.title}
-              fill
-            />
+    <div id="projects" className="max-w-[1200px] px-4 md:px-5 py-14 md:py-20 mx-auto scroll-mt-32">
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="font-display text-4xl md:text-6xl font-bold text-dark-900 dark:text-white mb-3">
+          Featured Projects
+        </h2>
+        <p className="text-base md:text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          Real solutions delivering measurable business outcomes
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        {projects.map((project: ProjectItem, index: number) => (
+          <div key={index} className="card-hover glass rounded-2xl p-6 group">
+            <div className="mb-4">
+              <h3 className="font-display text-xl font-bold text-dark-900 dark:text-white mb-2">{project.title}</h3>
+              <p className="text-dark-600 dark:text-dark-300 text-sm leading-relaxed mb-4">{project.description}</p>
+            </div>
+            <div className="mb-4 p-3 bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-lg">
+              <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">BUSINESS OUTCOME</p>
+              <p className="text-sm text-dark-700 dark:text-dark-200 italic">&ldquo;{project.businessOutcome}&rdquo;</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {project.capabilities.map((cap, cIndex) => (
+                <span key={cIndex} className="px-2 py-1 bg-primary-500/10 text-primary-600 dark:text-primary-400 text-xs rounded-full">{cap}</span>
+              ))}
+            </div>
             {project.url && (
-              <button
-                onClick={() => openProject(project.url)}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 py-2 px-3 rounded-full border-white text-white opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                Preview
+              <button onClick={() => openProject(project.url)} className="mt-4 text-sm text-primary-600 dark:text-primary-400 font-medium hover:underline">
+                View Project →
               </button>
             )}
           </div>
-          <div className="flex flex-col items-center md:items-start gap-8">
-            <h4 className="font-medium text-3xl text-center md:text-start">
-              {project.title}
-            </h4>
-            <p className="text-center md:text-justify text-lg font-light">
-              {project.description}
-            </p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
