@@ -10,7 +10,6 @@ import SkillsAndCapabilities from "../../components/Skills";
 import Process from "../../components/Process";
 import WhyChooseMe from "../../components/WhyChooseMe";
 import EngagementModels from "../../components/EngagementModels";
-import Experience from "../../components/Experience";
 import FAQ from "../../components/FAQ";
 import Contact from "../../components/Contact";
 import BackToTop from "../../components/BackToTop";
@@ -31,7 +30,6 @@ const Home = () => {
           <Process />
           <WhyChooseMe />
           <EngagementModels />
-          <Experience />
           <FAQ />
           <Contact />
         </main>

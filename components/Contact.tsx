@@ -37,7 +37,7 @@ const Contact = () => {
 
         <div className="flex flex-col gap-8 items-center">
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
-            <a href="tel:+919999999999" className="card-hover glass rounded-2xl p-6 flex flex-col items-center gap-4 group cursor-pointer">
+            <a href="tel:+917387149782" className="card-hover glass rounded-2xl p-6 flex flex-col items-center gap-4 group cursor-pointer">
               <div className="relative">
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                 <div className="relative p-3 rounded-xl bg-gradient-to-br from-primary-500/10 to-accent-500/10">
