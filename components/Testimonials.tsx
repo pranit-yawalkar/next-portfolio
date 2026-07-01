@@ -3,22 +3,22 @@ import React from "react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Healthcare Startup Founder",
-      role: "CEO, Digital Health Platform",
+      name: "CEO, 95Rentals",
+      role: "95Rentals",
+      content: "Pranit built our rental platform from the ground up and delivered exactly what we envisioned. His ability to understand our business model and translate it into a seamless product was outstanding. The platform has transformed how we manage rentals.",
+      outcome: "Rental operations fully digitized"
+    },
+    {
+      name: "CEO, Skids",
+      role: "Skids (Healthcare)",
       content: "Pranit transformed our vision into a fully functional healthcare platform. His understanding of healthcare workflows and attention to data security made him an invaluable partner. The platform has significantly improved our operational efficiency.",
       outcome: "Reduced administrative time by 60%"
     },
     {
-      name: "Enterprise Client",
-      role: "CTO, Financial Services Company",
-      content: "Exceptional technical expertise combined with business acumen. Pranit delivered a complex portfolio management system that exceeded our expectations. His ability to translate business requirements into scalable solutions is remarkable.",
-      outcome: "Launched 3 months ahead of schedule"
-    },
-    {
-      name: "Product Manager",
-      role: "Product Lead, SaaS Company",
-      content: "Working with Pranit was a game-changer for our product roadmap. He doesn't just write code—he thinks about the entire product experience. Our user engagement increased significantly after the improvements he implemented.",
-      outcome: "User engagement increased by 45%"
+      name: "Ratan Interiors",
+      role: "Ratan Interiors",
+      content: "Working with Pranit was a great experience. He delivered a polished, professional web presence for our interiors business that truly reflects our brand. His attention to detail and responsiveness throughout the project was impressive.",
+      outcome: "Strong online presence established"
     }
   ];
 
